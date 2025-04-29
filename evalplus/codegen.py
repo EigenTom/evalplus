@@ -213,16 +213,17 @@ def run_codegen(
     # response_prefix = "Below is a Python script with a self-contained function that solves the problem and passes corresponding tests:"
 
     # TODO: will hard-code prefixes to meet AceCoder's requirement
-    instruction_prefix = """\
-Answer the given coding question. You must conduct reasoning about the problem and then provide the final program as answer. 
-During the thinking process, you can write test cases or test your current solutions using a testing tool. if you want to test any python code, writing it inside ```python and ``` tags following with "```output". 
-The code between "```python" and "``````output" will then be executed, and the terminal output (standard output and standard error) will be provided to you. 
-Each program between ```python and ``` tags are independent program. You can test Python codes as many times as you want. 
-If you find no further code execution needed, you can then give your final solution in a markdown code block like this: ```python\nyour code here\n``` without appending anything. 
-The final program will be evaluated against the hidden test cases. If the final program passes all the test cases, you will get a reward. If the final program fails any of the test cases, you will get a penalty.
-"""
-    response_prefix = ""
+#     instruction_prefix = """\
+# Answer the given coding question. You must conduct reasoning about the problem and then provide the final program as answer. 
+# During the thinking process, you can write test cases or test your current solutions using a testing tool. if you want to test any python code, writing it inside ```python and ``` tags following with "```output". 
+# The code between "```python" and "``````output" will then be executed, and the terminal output (standard output and standard error) will be provided to you. 
+# Each program between ```python and ``` tags are independent program. You can test Python codes as many times as you want. 
+# If you find no further code execution needed, you can then give your final solution in a markdown code block like this: ```python\nyour code here\n``` without appending anything. 
+# The final program will be evaluated against the hidden test cases. If the final program passes all the test cases, you will get a reward. If the final program fails any of the test cases, you will get a penalty.
+# """
 
+    instruction_prefix = ""
+    response_prefix = ""
     if evalperf_type == "perf-instruct":
         instruction_prefix = "Please provide an efficient and self-contained Python script that solves the following problem in a markdown code block:"
         response_prefix = "Below is a Python script with a self-contained function that efficiently solves the problem and passes corresponding tests:"

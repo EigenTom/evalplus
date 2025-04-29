@@ -64,7 +64,7 @@ def make_model(
         )
     elif backend == "openai":
         from evalplus.provider.openai import OpenAIChatDecoder
-
+        print("f[DFEBUG] using openai apis")
         assert not force_base_prompt, f"{backend} backend does not serve base model"
         return OpenAIChatDecoder(
             name=model,
